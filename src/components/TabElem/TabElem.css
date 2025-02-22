@@ -1,0 +1,27 @@
+.tab-box {
+  margin-top: 5%;
+}
+
+.tab-box__titles {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.25rem;
+  margin-bottom: 1%;
+}
+
+.tab-box__tabel {
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  font-size: 1.25rem;
+}
+
+.tab-box__tabel__elems {
+  display: flex;
+  justify-content: space-around;
+  margin: 1.5% 0;
+  cursor: pointer;
+}
+
+.cover {
+  display: none;
+}

@@ -1,0 +1,28 @@
+.box {
+  /* border: 1px solid rgb(255, 0, 0); */
+  width: 95%;
+  margin: 25px auto 0 auto;
+  padding: 5%;
+  box-sizing: border-box;
+}
+
+.box__form {
+ /*  border: 1px solid black; */
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.25rem;
+}
+
+.box__form__elem__input {
+  margin-top: 5%;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  border: 0.5px solid black;
+  padding: 2% 3%;
+}
+
+.box__form__but {
+  width: 125px;
+  border-radius: 10px;
+  border: 0.5px solid black;
+}
