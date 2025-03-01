@@ -32,11 +32,7 @@ function App() {
     e.preventDefault();
     let stut:boolean = true;
 
-    console.log(validateDate(refDate.current?.value));
-    console.log(validateKm(refKm.current?.value));
-
-
-
+ 
     
     if (!validateDate(refDate.current?.value) || refDate.current?.value.length > 8) {
       alert('Вводимый формат даты: ДД.ММ.ГГ');
