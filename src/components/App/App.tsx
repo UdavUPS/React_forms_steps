@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import './App.css';
 import TabElem from '../TabElem/TabElem.tsx';
-import { doSort } from './functionsForApp.ts'
+import { doSort, validateDate, validateKm } from './functionsForApp.ts'
 
 /* type BDtype = {
    key: number,
@@ -13,7 +13,7 @@ function App() {
   
 
   const [BD, setForm] = useState<any>([
-    {key: 123, date:'22.01.25', km: "2.5"}
+    {key: 123, date:'дд.мм.гг', km: "ч.ч"}
   ]);
 
   
@@ -31,6 +31,22 @@ function App() {
   function butClick (e: React.MouseEvent<HTMLElement>) {
     e.preventDefault();
     let stut:boolean = true;
+
+    console.log(validateDate(refDate.current?.value));
+    console.log(validateKm(refKm.current?.value));
+
+
+
+    
+    if (!validateDate(refDate.current?.value) || refDate.current?.value.length > 8) {
+      alert('Вводимый формат даты: ДД.ММ.ГГ');
+      return
+    }
+
+    if (!validateKm(refKm.current?.value)) {
+      alert('Расстояние должно указываться только числами');
+      return
+    }
 
     /* if (BD.length === 0) { stut = false; } */
 

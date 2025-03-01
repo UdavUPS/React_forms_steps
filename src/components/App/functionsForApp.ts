@@ -30,3 +30,13 @@ export function doSort(array:any):any {
 
     return array;
 }
+
+
+
+export function validateDate (text: string) {
+    return /[0-9][0-9].[0-9][0-9].[0-9][0-9]/.test(text);
+}
+
+export function validateKm (text: string) {
+    return /^\d*(\.\d+)?$/.test(text);
+}
